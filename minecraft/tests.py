@@ -1,8 +1,6 @@
 from django.test import TestCase
 
 # Create your tests here.
-import subprocess
+import requests
 
-res = subprocess.run(['bash', 'bash/ls.sh'], capture_output=True, text=True)
-
-print(res.stdout)
+print(((requests.get("http://localhost:5000/test")).json())['crt'])

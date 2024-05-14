@@ -6,6 +6,7 @@
         <p>vous avez un serveur sur le port : {{ serv.port }}</p>
         <p><a href={% url 'modify_server' %}>modifier votre serveur</a> | <a href={% url 'sup_server' %}>sup votre server</a></p>
     {% endif %}
+    <a href="{% url 'getconf' %}">conf vpn</a>
     <a href="{% url 'logout' %}">Logout</a>
 
 {% else %}

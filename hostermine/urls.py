@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('webserver.urls'), name='home'),
     path('accounts/', include('accounts.urls')),
-    path('minecraft/', include('minecraft.urls'))
+    path('minecraft/', include('minecraft.urls')),
+    path('vpn/', include('vpn.urls'))
 ]

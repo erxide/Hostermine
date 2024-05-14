@@ -1,7 +1,45 @@
-<form method="post">
+<!-- <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Connexion</button>
 </form>
 <br>
-<a href="{% url 'register' %}">register</a> | <a href="/">home</a>
+<a href="{% url 'register' %}">register</a> | <a href="/">home</a> -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+</head>
+<body>
+    <a class="absolute top-4 left-4 btn border-none text-5 bg-2" href="/">BACK TO HOME</a>
+    <div class="grid grid-cols-2 bg-4 h-screen">
+        <div class="flex flex-col items-center justify-center h-screen overflow-hidden">
+            <div class="grid grid-cols-4 w-2/4 justify-between items-center">
+                <div class=""></div>
+                <h1 class="text-4xl col-span-2 text-1 text-center">Connexion</h1>
+                <a class="text-2 text-end hover:font-black" href="./register.html">Inscription</a>
+            </div>
+            <form class="flex flex-col w-2/4" action="">
+                <input type="text" name="name" id="name" autocomplete="off" placeholder="Nom" required class="bg-5 rounded p-2 my-8">
+                <input type="password" name="password" id="password" placeholder="Mot de passe" required class="bg-5 rounded p-2 mb-8">
+                <button type="submit" class="flex w-full justify-center rounded-md bg-2 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Connexion</button>
+            </form>
+            <p class="mt-10 text-center text-m text-2">Mot de passe oublié ?</p>
+        </div>
+      
+        <div class="bg-2 z-[2] flex items-center justify-center">
+            <div class="relative bg-6 flex flex-col items-center justify-center w-3/5 p-8 rounded-xl">
+                <img class="absolute z-index-minus-one -top-1/4" src="../assets/img/steve.svg" alt="steve minecraft">
+                <h2 class="text-3xl my-8">Besoin d'aide ?</h2>
+                <p class="text-center">Si tu rencontres un problème pour te connecter, quelque soit la raison, nous t'invitons à rejoindre notre serveur Discord en cliquant sur le bouton plus bas et faire un ticket administration pour que nous puissions t'aider.</p>
+                <img src="../assets/img/discord.svg" alt="discord logo">
+            </div>
+        </div>
+      </div>
+    </div> 
+</body>
+</html>

@@ -2,6 +2,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
+from vpn import views as vpnview
 
 def login_view(request): 
     if request.user.is_authenticated:
@@ -30,7 +31,8 @@ def register_view(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            vpnview.createconf(user)
             return redirect('/')
     else:
         form = CustomUserCreationForm()
